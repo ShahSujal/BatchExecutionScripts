@@ -1,13 +1,13 @@
 "use client"
 import { executeSolanaBatchTransfer } from "@/lib/scripts/solanaBatchTransfer";
-import { performSolanaSwap } from "@/lib/scripts/swapSolanaTransfer";
+import swapDevnet from "@/lib/scripts/swapSOl";
 
 export default function Page() {
   // const signature = await exampleBatchTransfer();
-   const executeSolana = async () => {
-     const signature = await performSolanaSwap();
-     console.log(signature);
-   }
+  const executeSolana = async () => {
+    const signature = await swapDevnet();
+    console.log(signature);
+  }
   return (
     <div>
       <h1>Batch Transaction Example</h1>
